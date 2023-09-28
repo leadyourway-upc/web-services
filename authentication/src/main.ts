@@ -6,10 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('LeadYourWay Authentication API')
+    .setDescription('API for LeadYourWay microservice authentication')
     .setVersion('1.0')
-    .addTag('cats')
+    .addTag('authentication')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
